@@ -1,0 +1,20 @@
+body {
+  background: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  margin: 0 !important;
+  background-size: 100% cover!important;
+  overflow: hidden;
+  display: block;
+  height: 100%;
+}
+
+#main-container-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
