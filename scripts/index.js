@@ -1,5 +1,5 @@
 function navigateToAllPosts(){
-  location.href = "html/all_posts.html"
+  location.href = "html/postslist.html"
 }
 
 function showCreatePostModal(){
