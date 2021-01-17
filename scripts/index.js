@@ -1,13 +1,13 @@
-function navigateToAllPosts(){
+function navigateToAllPosts() {
   location.href = "html/postslist.html"
 }
 
-function showCreatePostModal(){
+function showCreatePostModal() {
   var modal = document.getElementById("create-post-modal");
   modal.style.display = "flex";
 }
 
-function hideCreatePostModal(){
+function hideCreatePostModal() {
   var modal = document.getElementById("create-post-modal");
   modal.style.display = "none";
 }

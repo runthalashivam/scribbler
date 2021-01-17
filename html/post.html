@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href='../styles/common.css' rel='stylesheet' type='text/css'>
+  <link href="../styles/post.css" rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../styles/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="title-container">
+      <p class="title">ScriBBler</p>
+      <p class="subheading">Explore, Imagine, Create</p>
+    </div>
+    <div class="login-buttons-container">
+      <button onclick="showSignInModal()" class="login-btns" type="button">Sign In</button>
+      <button onclick="showSignUpModal()" class="login-btns" type="button">Sign Up</button>
+    </div>
+  </div>
+  <div>
+    <div class="modal" id="signin-modal">
+      <div class="modal-content">
+
+        <div class="modal-head">
+          <span onclick="hideSignInModal()" id="close" class="close">&times;</span>
+          <h2 class="modal-title">Welcome Back!</h2>
+        </div>
+        <hr>
+        <form>
+          <label for="username" class="label-text">Username</label>
+          <input type="text" id="username" placeholder="Enter Username" required>
+          <label for="password" class="label-text">Password</label>
+          <input type="password" id="password" placeholder="Enter Password" required>
+          <button type="submit" onclick="signin(username, password)" class="signin-btn">Sign In</button>
+        </form>
+
+        <p class=bottom-banner>Not a member?<span onclick="hideSignInModal();showSignUpModal()" class=signup>Sign
+            Up</span></p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="modal" id="signup-modal">
+      <div class="modal-content">
+
+        <div class="modal-head">
+          <span onclick="hideSignUpModal()" id="close" class="close">&times;</span>
+          <h2 class="modal-title">Get Started</h2>
+        </div>
+        <hr>
+        <form>
+          <label for="fullname" class="label-text">Full name</label>
+          <input type="text" id="fullname" placeholder="Enter Full Name" required>
+          <label for="username" class="label-text">Username</label>
+          <input type="text" id="username" placeholder="Enter Username" required>
+          <label for="password" class="label-text">Password</label>
+          <input type="password" id="password" placeholder="Enter Password" required>
+          <label for="confirmpassword" class="label-text">Confirm Password</label>
+          <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+          <button type="submit" onclick="signup(firstName,lastName, email, password, mobile)" class="signin-btn">Sign
+            up</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="post-page-layout">
+    <div class="post-content">
+      <div id="post-title" class="post-title-class">
+        <h id="post-title-heading">The legacy of Jimi Hendrix</h>
+      </div>
+    </div>
+    <div class="post-author">
+
+      <!-- Insert code for Edit/Save button and  -->
+      <p class="post-author-class">Jimi</p>
+      <div id="edit-post" onclick="toggleEditSave()">
+        <button class="edit-post-btn" id="edit-post-btn-id">Edit
+          <i style="font-size: 14px;font-weight: bolder;" class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </button>
+
+      </div>
+
+    </div>
+
+    <div class="post-content" id="post-content-id">
+      <p id="post-body">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum laoreet, leo in consectetur hendrerit, ante
+        nunc rutrum magna, ut porta nibh libero id ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Quisque vitae ipsum non est ornare hendrerit sit amet a erat. Nam est urna, vestibulum a vulputate nec, posuere
+        ornare elit. Morbi id blandit dui. Vivamus tristique efficitur viverra. Suspendisse dictum iaculis elit.
+        Curabitur lacinia elit eget orci faucibus faucibus. Nulla ac venenatis orci, scelerisque malesuada libero.
+        Quisque sit amet tincidunt libero. Aenean imperdiet, orci nec consequat dapibus, tortor sapien mollis libero,
+        nec consequat mauris diam non neque. Donec facilisis ornare cursus. Duis blandit nisl diam, et fermentum massa
+        commodo nec. Pellentesque vel quam vitae velit consequat molestie. Integer laoreet felis tortor, ut tincidunt
+        augue malesuada et. Cras vehicula sed elit quis dapibus. Fusce vehicula tellus id odio porttitor convallis.
+        Nulla scelerisque augue mi, sed dictum tortor viverra id. Curabitur blandit, arcu eu porta tincidunt, diam dui
+        congue massa, ac ullamcorper ex mauris et turpis. Etiam tellus sem, cursus ut nisi quis, molestie tincidunt est.
+        Vivamus in massa gravida, rutrum sem sed, commodo tortor. Vestibulum metus ipsum, consequat at maximus at,
+        elementum et nisi. In eu urna nec est pharetra volutpat eu nec neque. Aenean in felis vel odio lacinia viverra
+        sed et elit. In hac habitasse platea dictumst. Phasellus dictum nisi sit amet mauris eleifend rutrum. Quisque
+        lacus magna, bibendum ac fermentum id, bibendum a arcu. Sed ante risus, placerat non nisl non, accumsan viverra
+        leo.
+      </p>
+    </div>
+    <div>
+      <button class="post-like-btn" onclick="incrementCounter()">
+        <span id="like-text">Like</span>
+        <i style="font-size: 14px;font-weight: bolder;" class="fa fa-thumbs-up" aria-hidden="true"></i>
+      </button>
+      <p>
+        <span id="like-counter"></span>
+      </p>
+      <div id="first-like">Be the first one to like this!</div>
+    </div>
+
+
+    <div class="comment-on-post">
+      <textarea id="comment-text-area" class="comment-on-post" rows="4" cols="100"
+        placeholder="Leave a comment"></textarea>
+    </div>
+    <button class="post-like-btn" onclick="addComment()">Comment</button>
+    <div class="comments-section">
+      <h3>All Comments</h3>
+      <div class="all-comments" id="show-all-comments" style="display:none"></div>
+    </div>
+
+  </div>
+
+  <script src="../scripts/common.js"></script>
+  <script src="../scripts/post.js"></script>
+</body>
+
+</html>
