@@ -18,7 +18,7 @@
   padding-right: 5px;
   padding-left: 5px;
   color: white;
-  font-family: 'Ubuntu Condensed';
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
 
@@ -64,13 +64,13 @@ form {
 input {
   padding: 10px;
   outline: none;
-  font-family: Abel;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .label-text {
   font-weight: bold;
   margin: 10px 0;
-  font-family: Abel;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .modal-content {
@@ -93,8 +93,8 @@ input {
 }
 
 .modal-title {
-  align-self: center;
-  font-family: Abel;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666B72;
 }
 
 .signin-btn {
@@ -105,7 +105,7 @@ input {
   font-size: 16px;
   margin-top: 20px;
   cursor: pointer;
-  font-family: Abel;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .signup {
@@ -113,9 +113,9 @@ input {
   font-weight: bolder;
   margin-left: 10px;
   cursor: pointer;
-  font-family: Abel;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .bottom-banner {
-  font-family: Abel;
+  font-family: Arial, Helvetica, sans-serif;
 }`
